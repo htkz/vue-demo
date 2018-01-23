@@ -1,0 +1,44 @@
+section {
+  margin: 0; }
+
+#signInAndSignUp {
+  border: 1px solid black;
+  position: fixed;
+  height: 550px;
+  width: 320;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  color: #ccc; }
+  #signInAndSignUp .formRow label {
+    display: block;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 700;
+    margin-bottom: .25rem;
+    font-size: 1em; }
+  #signInAndSignUp .formRow input {
+    padding: 10px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1em;
+    border-radius: 4px; }
+  #signInAndSignUp .formRow input:-webkit-autofill,
+  #signInAndSignUp .formRow input:-webkit-autofill:hover,
+  #signInAndSignUp .formRow input:-webkit-autofill:focus {
+    box-shadow: 0 0 0 50px white inset;
+    -webkit-text-fill-color: #333; }
+  #signInAndSignUp .formActions input {
+    font-size: 1rem;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    background: #e0e1e2 none;
+    color: rgba(0, 0, 0, 0.6);
+    padding: .5em 1em;
+    font-weight: 700;
+    margin-top: 1em; }
+
+/*# sourceMappingURL=login.css.map */
