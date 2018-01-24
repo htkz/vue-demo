@@ -1,34 +1,34 @@
-section {
+section, p {
     margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #DEE3E7;
 }
 
 #signInAndSignUp {
-    border: 1px solid black;
     position: fixed;
-    height: 220px;
-    width: 320;
+    width: 350px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
     color: #ccc;
-
+    background-color: #29313C;
+    display: flex;
+    justify-content: center;
     .formRow {
-        label {
-            display: block;
-            color: rgba(0,0,0,.87);
-            font-weight: 700;
-            margin-bottom: .25rem;
-            font-size: 1em;
-        }
+        position: relative;
         input {
-            padding: 10px;
+            padding: 5px 10px;
+            margin: 5px 0;
             outline: none;
             background-color: transparent;
             border: 1px solid #ccc;
-            width: 100%;
             font-size: 1em;
-            border-radius: 4px;
+            width: 100%;
+            padding-left: 30px;
         }
         // 去除autofill自带的黄色背景
         input:-webkit-autofill,
@@ -36,6 +36,14 @@ section {
         input:-webkit-autofill:focus {
             box-shadow:0 0 0 50px white inset;
             -webkit-text-fill-color: #333;
+        }
+        span {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: black;
+            z-index: 2;
         }
     }
 
@@ -45,11 +53,31 @@ section {
             cursor: pointer;
             outline: 0;
             border: none;
-            background: #e0e1e2 none;
+            background-color: #1B2027;
             color: rgba(0,0,0,.6);
             padding: .5em 1em;
-            font-weight: 700;
             margin-top: 1em;
+            width: 100%;
+            color: #ccc;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    .signUp,
+    .login {
+        text-align: center;
+        width: 70%;
+        p {
+            margin: 10px 0;
+            &:last-child {
+                font-size: 12px;
+                cursor: pointer;
+                &:hover {
+                    color: white;
+                }
+            }
         }
     }
 }

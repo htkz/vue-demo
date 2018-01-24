@@ -1,45 +1,67 @@
 <html>
     <head>
         <script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
+        <script src="//at.alicdn.com/t/font_552083_2p7szh493le1xlxr.js"></script>
         <script src="js/vue.js"></script>
         <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/icon.css">
     </head>
     <body>
         <div id="app">
             <section id="signInAndSignUp" v-if="!currentUser">
-                <div>
+                <!-- <div>
                     <label><input type="radio" v-model="actionType" value="signUp">SIGN UP</label>
                     <label><input type="radio" v-model="actionType" value="login">LOG IN</label>
-                </div>
+                </div> -->
                 <div class="signUp" v-if="actionType=='signUp'">
+                    <p>Take down what you need to do tomorrow!</p>
                     <form @submit.prevent="signUp">
                         <div class="formRow">
-                            <label>username</label>
+                            <span class="icon-username">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-username"></use>
+                                </svg>
+                            </span>
                             <input type="text" v-model="formData.username">
                         </div>
                         <div class="formRow">
-                            <label>password</label>
+                            <span class="icon-password">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-password"></use>
+                                </svg>
+                            </span>
                             <input type="password" v-model="formData.password">
                         </div>
                         <div class="formActions">
                             <input type="submit" value="register">
                         </div>
                     </form>
+                    <p @click="actionType='login'">or login</p>
                 </div>
                 <div class="login" v-if="actionType=='login'">
+                    <p>Take down what you need to do tomorrow!</p>
                     <form @submit.prevent="login">
                         <div class="formRow">
-                            <label>username</label>
+                            <span class="icon-username">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-username"></use>
+                                </svg>
+                            </span>
                             <input type="text" v-model="formData.username">
                         </div>
                         <div class="formRow">
-                            <label>password</label>
+                            <span class="icon-password">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-password"></use>
+                                </svg>
+                            </span>
                             <input type="password" v-model="formData.password">
                         </div>
                         <div class="formActions">
                             <input type="submit" value="login">
                         </div>
                     </form>
+                    <p @click="actionType='signUp'">or signup</p>
                 </div>
             </section>
             <section id="todo" v-if="currentUser">
