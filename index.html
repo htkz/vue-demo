@@ -1,92 +1,12 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
-        <script src="//at.alicdn.com/t/font_552083_2p7szh493le1xlxr.js"></script>
-        <script src="js/vue.js"></script>
-        <link rel="stylesheet" href="css/login.css">
-        <link rel="stylesheet" href="css/icon.css">
-    </head>
-    <body>
-        <div id="app">
-            <section id="signInAndSignUp" v-if="!currentUser">
-                <!-- <div>
-                    <label><input type="radio" v-model="actionType" value="signUp">SIGN UP</label>
-                    <label><input type="radio" v-model="actionType" value="login">LOG IN</label>
-                </div> -->
-                <div class="signUp" v-if="actionType=='signUp'">
-                    <p>Take down what you need to do tomorrow!</p>
-                    <form @submit.prevent="signUp">
-                        <div class="formRow">
-                            <span class="icon-username">
-                                <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="#icon-username"></use>
-                                </svg>
-                            </span>
-                            <input type="text" v-model="formData.username">
-                        </div>
-                        <div class="formRow">
-                            <span class="icon-password">
-                                <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="#icon-password"></use>
-                                </svg>
-                            </span>
-                            <input type="password" v-model="formData.password">
-                        </div>
-                        <div class="formActions">
-                            <input type="submit" value="register">
-                        </div>
-                    </form>
-                    <p @click="actionType='login'">or login</p>
-                </div>
-                <div class="login" v-if="actionType=='login'">
-                    <p>Take down what you need to do tomorrow!</p>
-                    <form @submit.prevent="login">
-                        <div class="formRow">
-                            <span class="icon-username">
-                                <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="#icon-username"></use>
-                                </svg>
-                            </span>
-                            <input type="text" v-model="formData.username">
-                        </div>
-                        <div class="formRow">
-                            <span class="icon-password">
-                                <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="#icon-password"></use>
-                                </svg>
-                            </span>
-                            <input type="password" v-model="formData.password">
-                        </div>
-                        <div class="formActions">
-                            <input type="submit" value="login">
-                        </div>
-                    </form>
-                    <p @click="actionType='signUp'">or signup</p>
-                </div>
-            </section>
-            <section id="todo" v-if="currentUser">
-                <p></p>
-                <p>
-                    当前用户:<span>{{ currentUser.username }}</span>
-                    <button @click="logout">登出</button>
-                </p>
-                <div class="newTask">
-                    添加新任务
-                    <input type="text" v-model="newTodo" @keypress.enter="addTodo">
-                </div>
-                <ol class="todos">
-                    <li v-for="todo in todoList">
-                        <input type="checkbox" v-model="todo.down">
-                        {{ todo.title }}
-                        <span v-if="todo.done">已完成</span>
-                        <span v-else>未完成</span>
-                        <span>{{ todo.createdAt }}</span>
-                        <button type="button" @click="removeTodo">X</button>
-                    </li>
-                </ol>
-            </section>
-        </div>
-        <script src="js/db.js"></script>
-        <script src="js/app.js"></script>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>resume-maker</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>

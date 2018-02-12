@@ -1,9 +1,27 @@
-Hi, professor Stratos,
+# resume-maker
 
-I have come back to China last week beacuse I was scratched by the cat and need to get the rabies vaccine as soon as possible(it's expensive in American).
-And I am working with kostas through the skype these days.
-You know, kostas will not be in the lab until April and life in American costs a lot of money, so could I work with kostas in China for the last 2 months?
-Also, the seat could be arranged to other person who work in our lab.
+> A Vue.js project
 
-Best wishes!
-Mo
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run all tests
+npm test
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
